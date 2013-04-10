@@ -11,7 +11,8 @@ $shop .= '<strong>Author</strong><strong>ISBN</strong>';
 for ($i=0; $i<$num_books; $i++)
 {
     $book  = mysql_fetch_row($classics);
-    $shop .= "<form method='post' id='".$book[5]."' >";
+    //$shop .= "<form method='post' id='".$book[5]."' >";
+    $shop .= "<form method='post' >";
     $shop .= "<span class='author'>";
     $shop .= $book[0];
     $shop .= "</span>";
@@ -19,7 +20,7 @@ for ($i=0; $i<$num_books; $i++)
     $shop .= $book[5];
     $shop .= "</span>";
     $shop .= "<input type='submit' />";
-    $shop .= "<input type='hidden' value='".$book[5]."' name='".$book[5]."' />";
+    $shop .= "<input type='hidden' value='".$book[5]."' name='isbn'>";
     $shop .= "</form>";
 }
 echo $shop;
