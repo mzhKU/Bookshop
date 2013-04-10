@@ -16,8 +16,16 @@ $('document').ready(function()
 
     function build(response)
     {
+        $('#add_form').submit(add_item);
         $('.items').html(response);
-        $('form').submit(remove_item);
+        $('.remove_form').submit(remove_item);
+    }
+    
+    function add_item()
+    {
+        var form_data = $(this).serialize();
+        console.log(form_data);
+        return false;
     }
     
     function remove_item()
@@ -31,9 +39,9 @@ $('document').ready(function()
                        console.log(response);
                    }
               );
-        return false;
+        populate();
     }
-    
+
     $.when(mysql_connection_setup()).done(populate);
 
 }); // End ready

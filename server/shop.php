@@ -12,7 +12,7 @@ for ($i=0; $i<$num_books; $i++)
 {
     $book  = mysql_fetch_row($classics);
     //$shop .= "<form method='post' id='".$book[5]."' >";
-    $shop .= "<form method='post' >";
+    $shop .= "<form class='remove_form' method='post' >";
     $shop .= "<span class='author'>";
     $shop .= $book[0];
     $shop .= "</span>";
