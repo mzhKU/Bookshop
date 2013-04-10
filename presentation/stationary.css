@@ -1,11 +1,22 @@
-h1                 { font-family:Courier, Helvetica;
-                       font-size:200%;               }
-strong             { font-family:Helvetica;          }
-.author            { font-family:Verdana;            }
-.isbn              {       color:red;                }
-form[type=button]  {  text-align:justify;            }
-body               { background-color:blue;          }
-body               {            color:white;         }
-[type=button]      { font-family:Courier;            }
-.bigfirst:first-letter { font-size:500%;
-                              font:left;             }
+h1                     {      font-family:Courier, Helvetica;
+                                font-size:200%;               }
+
+strong                 {      font-family:Helvetica;          }
+
+.author                {      font-family:Verdana;            }
+
+.isbn                  {            color:red;                }
+
+form[type=button]      {       text-align:justify;            }
+
+body                   { background-color:blue;               }
+
+body                   {            color:white;              }
+
+[type=button]          {      font-family:Courier;            }
+
+.bigfirst:first-letter {        font-size:500%;
+                                     font:left;               }
+
+a                      {            color:white;               
+                                font-size:200%;               }

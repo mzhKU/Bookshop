@@ -3,6 +3,9 @@ $('document').ready(function()
     // Path to MySQL configuration.
     var server = '../server/'
     var data   = '../data/'
+    
+    // Event handler for static add_item form.
+    $('#add_item_form').submit(add_item);
 
     function mysql_connection_setup()
     {
@@ -16,7 +19,7 @@ $('document').ready(function()
 
     function build(response)
     {
-        $('#add_form').submit(add_item);
+        // Event handlers for dynamic elements.
         $('.items').html(response);
         $('.remove_form').submit(remove_item);
     }
@@ -24,7 +27,11 @@ $('document').ready(function()
     function add_item()
     {
         var form_data = $(this).serialize();
-        console.log(form_data);
+        $.post(
+                   server + 'add.php',
+                   form_data,
+                   populate
+              );
         return false;
     }
     
@@ -34,14 +41,12 @@ $('document').ready(function()
         $.post(
                    server + 'remove.php',
                    form_data,
-                   function(response)
-                   {
-                       console.log(response);
-                   }
+                   //function(response) {console.log(response);}
+                   populate
               );
-        populate();
+        return false;
     }
-
+    
     $.when(mysql_connection_setup()).done(populate);
 
 }); // End ready

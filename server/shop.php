@@ -19,7 +19,7 @@ for ($i=0; $i<$num_books; $i++)
     $shop .= "<span class='isbn'>";
     $shop .= $book[5];
     $shop .= "</span>";
-    $shop .= "<input type='submit' />";
+    $shop .= "<input type='submit' value='Remove'/>";
     $shop .= "<input type='hidden' value='".$book[5]."' name='isbn'>";
     $shop .= "</form>";
 }

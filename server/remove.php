@@ -7,7 +7,6 @@ if (isset($_POST['isbn']))
 {
     $isbn  = $_POST['isbn'];
     $query = "DELETE FROM classics WHERE isbn='$isbn'";
-    echo $query;
     mysql_query($query);
 }
 ?>
